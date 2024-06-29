@@ -1,0 +1,13 @@
+<h1>Product list</h1>
+
+<ul>
+  @for (product of products(); track product.id) {
+    <li >
+      <a [routerLink]="['/products', product.id]">
+        {{ product.title }}
+      </a>
+    </li>
+  } @empty {
+    <li>No products</li>
+  }
+</ul>
